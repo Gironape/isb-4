@@ -3,6 +3,8 @@ import logging
 import argparse
 import json
 
+from searching import find_number
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
@@ -22,3 +24,6 @@ if __name__ == '__main__':
             init = json.load(jf)
     except FileNotFoundError:
         logging.error(f"{init_path} not found")
+    if args.find:
+        logging.info('Поиск номера карточки\n')
+        find_number(init, int(init["processes_amount"]))
