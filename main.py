@@ -4,6 +4,7 @@ import argparse
 import json
 
 from searching import search_number
+from luhn_algorithm import luhn
 
 
 if __name__ == '__main__':
@@ -26,4 +27,7 @@ if __name__ == '__main__':
         logging.error(f"{init_path} not found")
     if args.find:
         logging.info('Поиск номера карточки\n')
-        card_number = search_number(init, args.find)
+        search_number(init, args.find)
+    elif args.check:
+        logging.info('Проверка корректности карточки...')
+        luhn(init)
