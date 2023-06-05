@@ -3,7 +3,7 @@ import logging
 import argparse
 import json
 
-from searching import find_number
+from searching import search_number
 
 
 if __name__ == '__main__':
@@ -26,4 +26,4 @@ if __name__ == '__main__':
         logging.error(f"{init_path} not found")
     if args.find:
         logging.info('Поиск номера карточки\n')
-        find_number(init, int(init["processes_amount"]))
+        card_number = search_number(init, args.find)

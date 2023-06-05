@@ -10,7 +10,6 @@ SETTINGS = {
     "last_digits": "9920",
     "found_card": "file/found_card.json",
     "stat_path": "files/picture_of_time.png",
-    "processes_amount": "16",
     "first_digits": "220070"
 }
 
