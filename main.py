@@ -10,8 +10,7 @@ from chart import visualize
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--init_path', default='file\\init_file.json', help='Путь к json файлу с данными, '
-                                                                                  'default = file\\init_file.json',
+    parser.add_argument('-i', '--init_path', default='file\\init_file.json', help='Путь к json файлу с данными',
                                                                                                    action='store')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('-f', '--find', help='Поиск номеров карт с заданным хэшем', action='store_true')
