@@ -2,7 +2,7 @@ import logging
 import json
 
 
-def luhn(init: dict)->bool:
+def luhn(init: dict) -> bool:
     """
     Проверяет номер на корректность алгоритмом Луна
     args:
